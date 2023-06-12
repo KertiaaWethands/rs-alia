@@ -1,0 +1,124 @@
+.carousell img {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+}
+
+.kiri {
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.kanan {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28%;
+    box-sizing: border-box;
+}
+
+.kiri .layananUnggulan {
+    margin-top: 42px;
+    margin-left: 20px;
+}
+
+.kiri .layananUnggulan .list {
+    align-items: center;
+}
+
+.kiri .layananUnggulan .list img {
+    margin-bottom: 25px;
+    margin-right: 20px;
+}
+
+.kiri .layananPenunjang {
+    margin-top: 22px;
+    margin-left: 30px;
+
+}
+
+.kiri .layananPenunjang .list img {
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.artikel {
+    margin-top: 30px;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+}
+
+.search {
+    width: 90%;
+    margin: 30px;
+}
+
+.form {
+    background-color: #40988F;
+    padding: 10px;
+
+}
+
+.form input[type="text"] {
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 10px 30px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.menu button {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.testimoni {
+    width: 90%;
+    word-wrap: break-word;
+    margin: 30px;
+    border: 1px solid black;
+}
+
+.testimoni h3 {
+    margin-left: 10px;
+}
+
+.testimoni .text {
+    background-color: #40988F;
+    padding: 20px;
+    font-size: large;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+.podcast {
+    border: 1px solid black;
+    width: 90%;
+    margin: 30px;
+    border-bottom: none;
+}
+
+.podcast h3 {
+    margin-left: 10px;
+}
+
+.podcast img {
+    width: 100%;
+}

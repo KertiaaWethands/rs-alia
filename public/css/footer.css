@@ -1,0 +1,21 @@
+.footer{
+    margin-top: 100px;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #40988F;
+    font-size: 20px;
+}
+.footer .kontak{
+    text-align: center;
+    word-wrap: break-word;
+    width: 150px;
+}
+.footer .logoFooter img{
+    width: 100px;
+}
+
+.footer .sosmed img{
+    width: 25px;
+    margin-top: 8px;
+}
