@@ -1,0 +1,113 @@
+.infoBase {
+  margin-bottom: -100px;
+  width: 100%;
+}
+
+
+.infoBase .imgFull {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info1, .info2 {
+  height: 800px;
+  position: relative;
+}
+
+.info1 .swiperBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40988F;
+  border-radius: 50%;
+}
+
+.info1 .swiperBtn i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.info1 .swiperBtn.left {
+  left: 20px;
+}
+
+.info1 .swiperBtn.right {
+  right: 20px;
+}
+
+.info2 {
+  display: flex;
+}
+
+.info2 > div {
+  flex:1 ;
+  height: 100%;
+}
+
+.info2 .description {
+  display: flex;
+  flex-direction: column;
+}
+
+.info2 .topDesc {
+  padding: 2rem 3rem;
+  flex: 1;
+}
+
+.info2 .topDesc h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+.info2 .topDesc p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.info2 .botDesc {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.info2 .botDesc a {
+  color: black;
+  text-decoration: none;
+}
+
+.info3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 4rem 2rem;
+}
+
+.info3 .item {
+  text-align: center;
+}
+
+.info3 .itemImage {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+
+.info3 .item span {
+  font-size: 1.2rem;
+}

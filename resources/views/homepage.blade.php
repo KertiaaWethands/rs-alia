@@ -15,7 +15,7 @@
     @section('content')
     <div>
         <div class="carousell">
-            <img src="icons/carousell.png" alt="carousell">
+            <img src="images/carousell.png" alt="carousell">
         </div>
         <div class="container">
             <div class="kiri">

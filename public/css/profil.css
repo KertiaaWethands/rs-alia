@@ -1,0 +1,31 @@
+.testimoni {
+    width: 75%;
+    word-wrap: break-word;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #40988F;
+}
+
+.testimoni h3 {
+    margin-left: 10px;
+    border-radius: 25px;
+}
+
+.testimoni .text {
+
+    background-color: #D0E8E5;
+    padding: 20px;
+    font-size: large;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+
+
+}
