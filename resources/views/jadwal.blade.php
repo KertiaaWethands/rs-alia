@@ -149,24 +149,26 @@
 
         </div>
     </div>
-
-
-    @for($i = 1; $i <= 10; $i++)
     <div class="dokter">
-        <div class="list-dokter">
-            <img src="icons/dokter.svg" alt="dokter">
-            <div class="kata">
-                <h2>dr. Amalia Rositawati, Sp.DV</h2>
-                <h3>Kulit dan Kelamin</h3>
-                <ul>
-                    <li>Selasa (13.00 - 17.00)</li>
-                    <li>Kamis (13.00 - 17.00)</li>
-                </ul>
-            </div>
+  @for($i = 1; $i <= 10; $i++)
+    <div class="card">
+      <div class="list-dokter">
+        <img src="icons/dokter.svg" alt="dokter">
+        <div class="kata">
+          <h2>dr. Amalia Rositawati, Sp.DV</h2>
+          <h3>Kulit dan Kelamin</h3>
+          <ul>
+            <li>Selasa (13.00 - 17.00)</li>
+            <li>Kamis (13.00 - 17.00)</li>
+          </ul>
         </div>
-        <button>Buat Janji Temu</button>
+      </div>
+      <button>Buat Janji Temu</button>
     </div>
-    @endfor
+  @endfor
+</div>
+
+
 
 
         @endsection

@@ -33,8 +33,8 @@ Route::get('/register', function(){
     return view('register');
 });
 
-Route::get('/schedule', function(){
-    return view('schedule');
+Route::get('/buatjanji', function(){
+    return view('buatjanji');
 });
 
 Route::get('/information1', fn () => view('information1'));

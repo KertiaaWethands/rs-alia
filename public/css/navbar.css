@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'gentium';
+    src: url('fonts/GenBkBasR.ttf');
+}
 .navbar{
     height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-family: 'gentium';
+    background-color: white;
 }

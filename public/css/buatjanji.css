@@ -1,7 +1,5 @@
 body{
     background-image: url("/icons/bg-schedule.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .container{
@@ -23,6 +21,7 @@ body{
 
 .login-contain{
     margin: 25px 0;
+    padding-inline: 15px;
 }
 
 .text-title{
@@ -31,11 +30,12 @@ body{
 }
 
 .input-data input{
-    width: 380px;
+    width: 400px;
     height: 40px;
     border-radius: 15px;
     margin: 12px 0;
-    padding-left: 15px;
+    padding-inline: 15px;
+    box-sizing: border-box;
     font-size: 18px;
 }
 
@@ -44,10 +44,9 @@ body{
     height: 40px;
     border-radius: 15px;
     margin: 12px 0;
-    padding-left: 15px;
+    padding-inline: 15px;
     font-size: 18px;
 }
-
 .input-data input::placeholder{
     font-size: 18px;
 }
@@ -57,5 +56,5 @@ body{
     height: 44px;
     border-radius: 15px;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
 }

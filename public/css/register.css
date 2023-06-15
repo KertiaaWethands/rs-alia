@@ -41,9 +41,18 @@ body{
 }
 
 .input-data .terms{
+    text-align: left;
     font-size: 18px;
     display: flex;
     width: 400px;
+    margin-left: 50px;
+}
+.input-data .terms input{
+    width: 20px;
+}
+.input-data .terms p{
+    margin-inline: 15px;
+    padding-inline: 0;
 }
 
 .button button{
@@ -60,8 +69,8 @@ body{
     color: #40988F;
     font-weight: 400;
     position: absolute;
-    left: 40%;
-    top: 50%;
+    left: 45%;
+    top: 47%;
 }
 
 .register-section{
@@ -71,10 +80,11 @@ body{
 }
 
 .register-section a{
-    text-decoration: none;
+    text-decoration: none !important;
+    color: black;
     padding: 8px 50px;
     background-color: white;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 15px;
     font-weight: 400;
 }

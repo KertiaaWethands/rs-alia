@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'gentium';
+    src: url('fonts/GenBkBasR.ttf');
+}
 body{
     margin: 0;
     padding: 0;
@@ -30,6 +34,7 @@ body{
 }
 .emergency p{
     margin-right: 10px;
+    font-family: 'gentium';
 }
 .callcenter{
     background: #FFFFFF;
@@ -45,6 +50,7 @@ body{
 }
 .callcenter p{
     margin-right: 10px;
+    font-family: 'gentium';
 }
 .user {
     display: initial;

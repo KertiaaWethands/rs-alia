@@ -6,9 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alia Hospital</title>
     <link rel="stylesheet" href="css/register.css">
+    <style>
+        @font-face {
+            font-family: 'lilita';
+            src: url('fonts/LilitaOne-Regular.ttf');
+        }
+        .text-decoration {
+            font-family: 'lilita', sans-serif;
+        }
+
+    </style>
 </head>
 <body>
-    
+
     @extends('Layout.app_home')
 
     @section('content')

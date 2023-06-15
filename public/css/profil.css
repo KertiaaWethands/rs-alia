@@ -1,31 +1,128 @@
-.testimoni {
+.bg{
+    background-image: url("/icons/bg.svg");
+}
+.profil {
+    display: flex;
+    flex-direction: column;
+    width: ;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.profil-box {
     width: 75%;
     word-wrap: break-word;
-    margin: auto;
     border: 1px solid black;
     text-align: center;
     border-radius: 20px;
     background-color: #40988F;
 }
 
-.testimoni h3 {
-    margin-left: 10px;
+.profil-box h3 {
+    color: black;
     border-radius: 25px;
 }
 
-.testimoni .text {
-
+.profil-box .text {
+    color: black;
     background-color: #D0E8E5;
-    padding: 20px;
+    padding: 30px;
     font-size: large;
+    display: flex;
     height: 300px;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
     border-radius: 20px;
-
-
 }
+.text-profil{
+    width: 90%;
+    margin-right: 0;
+}
+
+.form {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    margin: 15px;
+}
+
+.profil-box .text label {
+    color: black;
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.profil-box .text input {
+    flex-basis: 70%;
+    padding: 5px;
+    margin-left: 10px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.img-con{
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 20px;
+}
+.img-con img{
+    width: 100%;
+}
+.img-con button{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.riwayat {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.riwayat-table {
+    margin: auto;
+    width: 80%;
+    background-color: #D0E8E5;
+    border-radius: 20px;
+}
+
+.riwayat-table th {
+    color: black;
+    border-radius: 20px;
+    background-color: #40988F;
+    padding: 10px;
+}
+
+.riwayat-table th:first-child {
+    border-radius: 20px 20px 0 20px;
+}
+
+.riwayat-table th:last-child {
+    border-radius: 20px 20px 0 0;
+}
+
+.riwayat-table td {
+    padding: 10px;
+    border-bottom: 1px solid white; /* Menambahkan garis pemisah */
+}
+.riwayat-table tbody tr.white-row {
+    background-color: white; /* Menjadikan latar belakang putih */
+    color: black; /* Mengatur warna teks jika diperlukan */
+}
+
+
+.riwayat-table tbody tr:nth-child(even) td {
+    background-color: white; /* Menjadikan latar belakang putih */
+}
+
+
+.riwayat-table tbody tr:nth-child(odd) {
+    background-color: #D0E8E5;
+}
+
+
+

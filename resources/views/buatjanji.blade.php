@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alia Hospital</title>
-    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/buatjanji.css">
 </head>
 <body>
-    
+
     @extends('Layout.app_home')
 
     @section('content')
@@ -19,7 +19,7 @@
                         Buat janji temu dokter
                     </div>
                     <div class="input-data">
-                        <div>
+                        <div class="option">
                             <select name="dokter" id="dokter">
                                 <option selected disabled>Nama Dokter</option>
                                 <option value="Dokter Syariah">Drg. Syariah</option>
@@ -29,7 +29,7 @@
                         <div>
                             <input type="date" placeholder="Pilih Tanggal">
                         </div>
-                        <div>
+                        <div class="option">
                             <select name="waktu" id="waktu">
                                 <option selected disabled>Pilih Waktu Kunjungan</option>
                                 <option value="1">13:00</option>
