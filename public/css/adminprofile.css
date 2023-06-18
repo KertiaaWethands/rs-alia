@@ -1,0 +1,125 @@
+body{
+    background-color: #72CEC5;
+}
+
+.content-1, .profile-content{
+    width:100%;
+    margin-top: 50px;
+    margin-bottom:25px;
+}
+
+.title-1, .title{
+    text-align: center;
+    background-color: #40988F;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.table-1, content-2{
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+table{
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.kecil-1{
+    width: 50px;
+}
+
+.besar-1{
+    width: 300px;
+}
+
+th{
+    padding: 10px 0;
+    border: 0px;
+}
+
+td{
+    text-align: center;
+    padding: 10px 0;
+}  
+
+table tr:nth-child(even){
+    background-color: #FFFFFF;
+}
+
+table tr:nth-child(odd){
+    background-color: #D0E8E5;
+} 
+
+.profile-body{
+    text-align: center;
+    position: relative;
+    width: 1140px;
+    height: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #D0E8E5;
+}
+
+input{
+    width: 400px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+label{
+    font-size: 18px;
+}
+
+.nama{
+    position: absolute;
+    left: 80px;
+    top: 40px;
+}
+
+.username{
+    position: absolute;
+    left: 80px;
+    top: 100px;
+}
+
+.tglLahir{
+    position: absolute;
+    left: 80px;
+    bottom: 120px;
+}
+
+.noWA{
+    position: absolute;
+    left: 80px;
+    bottom: 60px;
+}
+
+.pict{
+    position: absolute;
+    right: 100px;
+    top: 60px;
+}
+
+.logoWA{
+    background-color: #40988F;
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.logo-wa img{
+    margin-left: 10px;
+    color: white;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}

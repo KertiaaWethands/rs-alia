@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DokterController;
+use App\Http\Controllers\JanjiController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,30 +17,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', fn () => view('homepage'));
 
-Route::get('/jadwal', function () {
-    return view('jadwal');
-});
+Route::get('/jadwal', fn () => view('jadwal'));
 
 Route::get('/profil', function () {
     return view('profil');
 });
 
-Route::get('/login', function(){
-    return view('login');
+Route::get('/home', function () {
+    return view('homepage');
 });
 
-Route::get('/register', function(){
-    return view('register');
-});
+Route::get('/register', [UserController::class, 'indexRegister']);
+Route::post('/register', [UserController::class, 'register']);
+Route::get('/login', [UserController::class, 'indexLogin']);
+Route::post('/login', [UserController::class, 'login']);
 
-Route::get('/buatjanji', function(){
-    return view('buatjanji');
-});
+Route::get('/buatjanji', [JanjiController::class, 'indexJanji'])->middleware('auth');
+Route::post('/buatjanji2', [JanjiController::class, 'pilihWaktu']);
+Route::post('/buatjanji', [JanjiController::class, 'buatJanji']);
 
 Route::get('/information1', fn () => view('information1'));
 Route::get('/information2', fn () => view('information2'));
 Route::get('/information3', fn () => view('information3'));
+
+Route::get('/admin', [AdminController::class, 'indexAdmin']);
+Route::get('/adminProfile', fn () => view('adminProfile'));
+
+Route::get('/addDokter', [DokterController::class, 'indexTambahDokter']);
+Route::post('/admin', [DokterController::class, 'tambahDokter']);
+Route::get('/update/{id}', [DokterController::class, 'indexUpdateDokter']);
+Route::post('/update', [DokterController::class, 'updateDokter']);
+Route::get('/delete/{id}', [DokterController::class, 'deleteDokter']);
+Route::get('/approve/{id}', [AdminController::class, 'approve']);
+Route::get('/decline/{id}', [AdminController::class, 'decline']);
+Route::get('/profile/{id}', [AdminController::class, 'profile']);

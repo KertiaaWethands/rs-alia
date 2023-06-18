@@ -13,7 +13,8 @@
 
     @section('content')
         <div class=".container">
-            <form action="" method="POST" class="form">
+            <form action="/buatjanji2" method="POST" class="form">
+                @csrf
                 <div class="login-contain">
                     <div class="text-title">
                         Buat janji temu dokter
@@ -22,25 +23,13 @@
                         <div class="option">
                             <select name="dokter" id="dokter">
                                 <option selected disabled>Nama Dokter</option>
-                                <option value="Dokter Syariah">Drg. Syariah</option>
-                                <option value="Dokter Syariah">Drg. Syariah</option>
+                                @foreach ($dokter as $dokter)
+                                    <option value="{{$dokter->id}}">{{$dokter->namaDokter}}</option>
+                                @endforeach
                             </select>
                         </div>
-                        <div>
-                            <input type="date" placeholder="Pilih Tanggal">
-                        </div>
-                        <div class="option">
-                            <select name="waktu" id="waktu">
-                                <option selected disabled>Pilih Waktu Kunjungan</option>
-                                <option value="1">13:00</option>
-                                <option value="2">14:00</option>
-                                <option value="4">16:00</option>
-                                <option value="5">17:00</option>
-                            </select>
-                        </div>
-                    </div>
                     <div class="button">
-                        <button type="submit">Buat Janji</button>
+                        <button type="submit">Pilih Dokter</button>
                     </div>
                 </div>
             </form>

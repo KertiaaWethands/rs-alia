@@ -31,7 +31,7 @@
     <div class="navbar">
         <img src="icons/logo.svg" alt="logo" style="width:150px">
         <p>Lokasi Rumah Sakit</p>
-        <p>Cari Dokter</p>
+        <p><a href="/buatjanji" style="text-decoration: none; color:black">Cari Dokter</a></p>
         <p>Layanan</p>
         <p>Tentang Kami</p>
         <img src="icons/slogan.svg" alt="slogan" style="width:150px">
