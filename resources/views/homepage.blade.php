@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="layananPenunjang">
-                    <h2>Layanan Penunjg</h2>
+                    <h2>Layanan Penunjang</h2>
                     <div class="list">
                         <img src="icons/layananPenunjang1.svg" alt="layananPenunjang1">
                         <img src="icons/layananPenunjang2.svg" alt="layananPenunjang2">
