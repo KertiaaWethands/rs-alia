@@ -1,0 +1,93 @@
+body{
+    background-color: #72CEC5;
+}
+
+.content-1, .content-2{
+    width:100%;
+    margin-top: 75px;
+}
+
+.title-1, .title-2{
+    text-align: center;
+    background-color: #40988F;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.table-1, .table-2{
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+table{
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.kecil-1, .kecil-2{
+    width: 50px;
+}
+
+.besar-1{
+    width: 300px;
+}
+
+.besar-2{
+    width: 300px;
+}
+
+th{
+    padding: 10px 0;
+    border: 0px;
+}
+
+.table-1 td{
+    text-align: center;
+    padding: 10px 0;
+}  
+
+table tr:nth-child(even){
+    background-color: #FFFFFF;
+}
+
+table tr:nth-child(odd){
+    background-color: #D0E8E5;
+}  
+
+.table-2 td{
+    text-align: center;
+    height: 100px;
+} 
+
+.button-title-2{
+    border-radius: 100%;
+    border: 3px solid;
+    padding: 0px 7px;
+    font-weight: bolder;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.approve, .update{
+    padding: 5px 25px;
+    background-color: #40988F;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.decline, .delete{
+    padding: 5px 30px;
+    background-color: #D16A6A;
+    border-radius: 20px;
+    border: 1px solid;
+    margin: 5px;
+    text-decoration: none;
+}

@@ -36,17 +36,18 @@
 
     @section('content')
         <div class=".container">
-            <form action="" method="POST" class="form">
+            <form action="/login" method="POST" class="form">
+                @csrf
                 <div class="login-contain">
                     <div class="text-masuk">
                         Masuk
                     </div>
                     <div class="input-data">
                         <div>
-                            <input type="text" placeholder="Username">
+                            <input type="text" name="username" placeholder="Username">
                         </div>
                         <div>
-                            <input type="text" placeholder="Kata Sandi">
+                            <input type="password" name="password" placeholder="Kata Sandi">
                         </div>
                     </div>
                     <div class="text-lupa-password">
@@ -62,7 +63,7 @@
         </div>
         <div class="register-section">
             <p>atau</p>
-            <a href="">Daftar</a>
+            <a href="/register">Daftar</a>
             <p>Jika belum memiliki akun</p>
         </div>
         <div class="login-image">

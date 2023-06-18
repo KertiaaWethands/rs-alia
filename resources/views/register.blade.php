@@ -23,34 +23,50 @@
 
     @section('content')
         <div class=".container">
-            <form action="" method="POST" class="form">
+            <form action="/register" method="POST" class="form">
+                @csrf
                 <div class="login-contain">
                     <div class="text-register">
                         Daftar
                     </div>
                     <div class="input-data">
                         <div>
-                            <input type="text" placeholder="Nama Lengkap">
+                            <input type="text" name="nama" placeholder="Nama Lengkap">
+                            @error('nama')
+                                <div class="text-red-800 text-left">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div>
-                            <input type="text" placeholder="Username">
+                            <input type="text" name="username" placeholder="Username">
+                            @error('username')
+                                <div class="text-red-800 text-left">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div>
-                            <input type="text" placeholder="Tanggal Lahir (DD/MM/YY)">
+                            <input type="date" name="tglLahir"">
+                            @error('tglLahir')
+                                <div class="text-red-800 text-left">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div>
-                            <input type="text" placeholder="Nomor Whatsapp (08xx)">
+                            <input type="text" name="nomor" placeholder="Nomor Whatsapp (08xx)">
+                            @error('nomor')
+                                <div class="text-red-800 text-left">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div>
-                            <input type="text" placeholder="Buat Kata Sandi">
+                            <input type="password" name="password" placeholder="Buat Kata Sandi">
+                            @error('password')
+                                <div class="text-red-800 text-left">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="terms">
-                            <input type="checkbox" name="terms" id="terms">
+                            <input type="checkbox" name="terms" id="terms" onclick="agree()">
                             <p>saya telah membaca dan menyetujui syarat dan ketentuan</p>
                         </div>
                     </div>
                     <div class="button">
-                        <button type="submit">Daftar</button>
+                        <button type="submit" id="button">Daftar</button>
                     </div>
                 </div>
             </form>
@@ -60,7 +76,7 @@
         </div>
         <div class="register-section">
             <p>atau</p>
-            <a href="">Masuk</a>
+            <a href="/login">Masuk</a>
             <p>Jika sudah memiliki akun</p>
         </div>
         <div class="login-image">
@@ -68,5 +84,16 @@
         </div>
     @endsection
 
+    <script type="text/javascript">
+        function agree(){
+            const button = document.querySelector('#button');
+
+            const disableButton = () => {
+            console.log("va");
+                button.disabled = false;
+
+            };
+        }
+    </script>
 </body>
 </html>
