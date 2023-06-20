@@ -52,3 +52,7 @@ Route::get('/delete/{id}', [DokterController::class, 'deleteDokter']);
 Route::get('/approve/{id}', [AdminController::class, 'approve']);
 Route::get('/decline/{id}', [AdminController::class, 'decline']);
 Route::get('/profile/{id}', [AdminController::class, 'profile']);
+
+// use App\Http\Controllers\HalamanController;
+
+// Route::get('/layananUnggulan', [HalamanController::class, 'tampilkanHalaman']);

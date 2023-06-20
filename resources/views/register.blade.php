@@ -16,6 +16,47 @@
         }
 
     </style>
+    <script>
+ function openPopup() {
+  const popupContainer = document.createElement('div');
+  popupContainer.classList.add('popup-container');
+
+  const popupContent = document.createElement('div');
+  popupContent.classList.add('popup-content');
+
+  const popupTitle = document.createElement('h2');
+  popupTitle.classList.add('popup-title');
+  popupTitle.innerText = 'Syarat dan Ketentuan';
+
+  const popupText = document.createElement('p');
+  popupText.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed vestibulum elit.';
+
+  const popupClose = document.createElement('span');
+  popupClose.classList.add('popup-close');
+  popupClose.innerText = 'X';
+
+  const closePopup = () => {
+    document.body.removeChild(popupContainer);
+    document.removeEventListener('click', handleOutsideClick);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (event.target === popupContainer) {
+      closePopup();
+    }
+  };
+
+  popupClose.addEventListener('click', closePopup);
+  popupContainer.addEventListener('click', handleOutsideClick);
+
+  popupContent.appendChild(popupClose);
+  popupContent.appendChild(popupTitle);
+  popupContent.appendChild(popupText);
+  popupContainer.appendChild(popupContent);
+  document.body.appendChild(popupContainer);
+}
+
+    </script>
 </head>
 <body>
 
@@ -62,7 +103,7 @@
                         </div>
                         <div class="terms">
                             <input type="checkbox" name="terms" id="terms" onclick="agree()">
-                            <p>saya telah membaca dan menyetujui syarat dan ketentuan</p>
+                            <p>saya telah membaca dan menyetujui <a href="#" onclick="openPopup()">syarat dan ketentuan</a></p>
                         </div>
                     </div>
                     <div class="button">

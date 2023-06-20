@@ -85,12 +85,23 @@
     margin-bottom: 20px;
     margin-right: 40px;
 }
+.kiri .paketKesehatan {
+    margin-top: 22px;
+    margin-left: 30px;
+
+}
+
+.kiri .paketKesehatan .list img {
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
 
 .artikel {
     margin-top: 30px;
+    margin-left: 20px;
     width: 90%;
     padding: 20px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
     text-align: justify;
 }
 
@@ -126,9 +137,9 @@
 
 .testimoni {
     width: 90%;
-    word-wrap: break-word;
     margin: 30px;
-    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
 }
 
 .testimoni h3 {
@@ -136,19 +147,52 @@
 }
 
 .testimoni .text {
-    background-color: #40988F;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item {
+    flex-shrink: 0;
+    width: 100%;
     padding: 20px;
-    font-size: large;
-    height: 300px;
+    background-color: #40988F;
     color: white;
+    text-align: center;
+}
+
+.testimonial-item p {
+    margin-bottom: 10px;
+}
+
+.testimoni.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.testimoni.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.testimoni.carousel-control.left {
+    left: 0;
+}
+
+.testimoni.carousel-control.right {
+    right: 0;
+}
+
 
 .podcast {
     border: 1px solid black;
@@ -156,7 +200,13 @@
     height: 60px;
     margin: 30px;
     border-bottom: none;
+
 }
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
 
 .podcast h3 {
     margin-left: 10px;
