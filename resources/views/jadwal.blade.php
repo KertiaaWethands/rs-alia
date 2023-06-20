@@ -163,7 +163,7 @@
           </ul>
         </div>
       </div>
-      <button>Buat Janji Temu</button>
+      <a href="/buatjanji2"><button>Buat Janji Temu</button></a>
     </div>
   @endfor
 </div>

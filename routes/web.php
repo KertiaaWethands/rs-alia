@@ -44,7 +44,6 @@ Route::get('/information3', fn () => view('information3'));
 
 Route::get('/admin', [AdminController::class, 'indexAdmin']);
 Route::get('/adminProfile', fn () => view('adminProfile'));
-
 Route::get('/addDokter', [DokterController::class, 'indexTambahDokter']);
 Route::post('/admin', [DokterController::class, 'tambahDokter']);
 Route::get('/update/{id}', [DokterController::class, 'indexUpdateDokter']);
