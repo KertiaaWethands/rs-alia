@@ -171,10 +171,10 @@
         <div class="kontak">
             <div class="logoFooter"><img src="icons/logoFooter.svg" alt="logo"></div>
             <div class="sosmed">
-                <img src="icons/ig.svg" alt="ig">
-                <img src="icons/fb.svg" alt="fb">
-                <img src="icons/wa.svg" alt="wa">
-                <img src="icons/yt.svg" alt="yt">
+                <a href=""><img src="icons/ig.svg" alt="ig"></a>
+                <a href=""><img src="icons/fb.svg" alt="fb"></a>
+                <a href=""><img src="icons/wa.svg" alt="wa"></a>
+                <a href=""><img src="icons/yt.svg" alt="yt"></a>
             </div>
             <p>Jl. Kartini No.2, Kec. Pancoran Mas, Kota Depok</p>
         </div>

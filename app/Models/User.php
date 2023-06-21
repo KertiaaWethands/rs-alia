@@ -23,6 +23,7 @@ class User extends Authenticatable
         'tglLahir',
         'nomor',
         'password',
+        'foto'
     ];
 
     /**

@@ -21,10 +21,6 @@ Route::get('/', fn () => view('homepage'));
 
 Route::get('/jadwal', fn () => view('jadwal'));
 
-Route::get('/profil', function () {
-    return view('profil');
-});
-
 Route::get('/home', function () {
     return view('homepage');
 });
@@ -33,6 +29,9 @@ Route::get('/register', [UserController::class, 'indexRegister']);
 Route::post('/register', [UserController::class, 'register']);
 Route::get('/login', [UserController::class, 'indexLogin']);
 Route::post('/login', [UserController::class, 'login']);
+
+Route::get('/profil', [UserController::class, 'profile']);
+Route::post('/update-profile', [UserController::class, 'updateProfile']);
 
 Route::get('/buatjanji', [JanjiController::class, 'indexJanji'])->middleware('auth');
 Route::post('/buatjanji2', [JanjiController::class, 'pilihWaktu']);
