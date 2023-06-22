@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function indexAdmin(){
-        $user = User::get();
-        
-        $janji = Janji::join('users', 'janjis.idPengguna', '=', 'users.id')->get();
+        $janji = Janji::join('users', 'janjis.idPengguna', '=', 'users.id')->get([
+            'users.nama', 'users.nomor', 'janjis.namaDokter', 'janjis.tglJanji', 'janjis.waktuJanji', 'janjis.id', 'janjis.status'
+        ]);
         $idjanji = 1;
 
         $dokter = Dokter::get();

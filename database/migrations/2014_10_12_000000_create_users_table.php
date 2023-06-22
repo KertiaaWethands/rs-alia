@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tglLahir')->nullable();
             $table->string('nomor');
             $table->string('password');
+            $table->string('foto')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

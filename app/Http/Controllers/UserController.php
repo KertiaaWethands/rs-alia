@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Janji;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -45,5 +46,48 @@ class UserController extends Controller
         }else{
             return redirect('/login');
         }
+    }
+
+    public function profile(){
+        $User = User::where('id', Auth::id())->first();
+        $janji = Janji::where('idPengguna',Auth::id())->get();
+        $noJanji = 1;
+
+        return view('profil', ['user' => $User, 'janji' => $janji, 'noJanji' => $noJanji]);
+    }
+
+    public function updateProfile(Request $request){
+
+        $request->validate([
+            'nama' => 'string',
+            'nomor' => 'max:12|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'foto' => 'image|mimes:png,jpg,jpeg|max:2048',
+        ]);
+        
+        if($request->foto != null){
+            $imageName = time().'.'.$request->foto->extension();
+            $request->foto->move(public_path('/images'), $imageName);
+
+            User::where('id', Auth::id())->update([
+                'nama' => $request->nama,
+                'username' => $request->username,
+                'tglLahir' => $request->tanggal_lahir,
+                'nomor' => $request->whatsapp,
+                'password' => Hash::make($request->password),
+                'foto' => $imageName,
+            ]);
+        }else{
+            User::where('id', Auth::id())->update([
+                'nama' => $request->nama,
+                'username' => $request->username,
+                'tglLahir' => $request->tanggal_lahir,
+                'nomor' => $request->whatsapp,
+                'password' => Hash::make($request->password),
+            ]);
+        }
+        
+        
+
+        return redirect('/profil');
     }
 }

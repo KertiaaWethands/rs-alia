@@ -171,10 +171,17 @@
         <div class="kontak">
             <div class="logoFooter"><img src="icons/logoFooter.svg" alt="logo"></div>
             <div class="sosmed">
+<<<<<<< HEAD
                 <a href="https://www.youtube.com/@Alia_Hospital"><img src="icons/yt.svg" alt="yt"></a>
                 <a href="https://www.instagram.com/alia.hospital/"><img src="icons/ig.svg" alt="ig"></a>
                 <a href="https://api.whatsapp.com/send?phone=6281133339000&text=Hallo..%20,%20Alia%20Hospital%20"><img src="icons/wa.svg" alt="wa"></a>
                 <img src="icons/fb.svg" alt="fb">
+=======
+                <a href=""><img src="icons/ig.svg" alt="ig"></a>
+                <a href=""><img src="icons/fb.svg" alt="fb"></a>
+                <a href=""><img src="icons/wa.svg" alt="wa"></a>
+                <a href=""><img src="icons/yt.svg" alt="yt"></a>
+>>>>>>> 9e6de243e60772a303d61cd34153b79794183882
             </div>
             <p>Jl. Kartini No.2, Kec. Pancoran Mas, Kota Depok</p>
         </div>

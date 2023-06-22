@@ -4,7 +4,6 @@
 .profil {
     display: flex;
     flex-direction: column;
-    width: ;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -70,12 +69,28 @@
 }
 .img-con img{
     width: 100%;
+    height: 190px;
+    border-radius: 15px;
 }
 .img-con button{
     width: 80%;
     height: 30px;
     border-radius: 10px;
     margin: 10px;
+}
+
+.img-con div{
+    background-color: white;
+    margin: 0 15px;
+    border-radius: 10px;
+    padding: 5px 0;
+    font-size: 15px;
+    transition-duration: 0.5s;
+}
+
+.img-con div:hover{
+    background-color: #40988F;
+    color: white;
 }
 
 .riwayat {

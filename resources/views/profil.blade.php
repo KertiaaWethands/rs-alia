@@ -17,39 +17,63 @@
     <div class="profil">
         <div class="profil-box">
             <h3><u>Data Saya</u></h3>
-            <div class="text">
-                <div class="text-profil">
-                    <div class="form">
-                        <label for="nama">Nama Lengkap:</label>
-                        <input type="text" id="nama" name="nama" placeholder="">
+            <form action="/update-profile" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="text">
+                    <div class="text-profil">
+                        <div class="form">
+                            <label for="nama">Nama Lengkap:</label>
+                            <input type="text" id="nama" name="nama" value="{{ $user->nama }}">
+                        </div>
+                        @error('nama')
+                                <div>{{$message}}</div>
+                        @enderror
+    
+                        <div class="form">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" value="{{ $user->username }}">
+                        </div>
+                        @error('username')
+                                <div>{{$message}}</div>
+                        @enderror
+    
+                        <div class="form">
+                            <label for="tanggal_lahir">Tanggal Lahir:</label>
+                            <input type="date" id="tanggal_lahir" name="tanggal_lahir" value="{{ $user->tglLahir }}">
+                        </div>
+                        @error('tanggal_lahir')
+                                <div>{{$message}}</div>
+                        @enderror
+    
+                        <div class="form">
+                            <label for="whatsapp">No Whatsapp:</label>
+                            <input type="text" id="whatsapp" name="whatsapp" value="{{ $user->nomor }}">
+                        </div>
+                        @error('whatsapp')
+                                <div>{{$message}}</div>
+                        @enderror
+    
+                        <div class="form">
+                            <label for="password">Buat Kata Sandi Baru:</label>
+                            <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi Terbaru">
+                        </div>
+                        @error('password')
+                                <div>{{$message}}</div>
+                        @enderror
                     </div>
-
-                    <div class="form">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" placeholder="">
-                    </div>
-
-                    <div class="form">
-                        <label for="tanggal_lahir">Tanggal Lahir:</label>
-                        <input type="text" id="tanggal_lahir" name="tanggal_lahir" placeholder="">
-                    </div>
-
-                    <div class="form">
-                        <label for="whatsapp">No Whatsapp:</label>
-                        <input type="text" id="whatsapp" name="whatsapp" placeholder="">
-                    </div>
-
-                    <div class="form">
-                        <label for="password">Buat Kata Sandi Baru:</label>
-                        <input type="password" id="password" name="password" placeholder="">
+                    <div class="img-con">
+                        <img src=" {{ $user->foto == null ? 'icons/user.svg' : '/images/'.$user->foto }}" alt="foto">
+                        <div class="change-photo">
+                            <label for="foto" class="btn">Upload Photo</label>
+                            <input id="foto" name="foto" type="file" hidden>
+                        </div>
+                        @error('foto')
+                                <div>{{$message}}</div>
+                        @enderror
+                        <button type="submit">Update Profile</button>
                     </div>
                 </div>
-                <div class="img-con">
-                    <img src="images/profile.png" alt="foto">
-                    <button>Upload Image</button>
-                    <button>Update Profile</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
     <div class="riwayat">
@@ -67,20 +91,23 @@
                     <td>Waktu Kunjungan</td>
                     <td>Status</td>
                 </tr>
-                <tr class="white-row">
-                    <td>1</td>
-                    <td>Dr. John Doe</td>
-                    <td>2023-06-01</td>
-                    <td>10:00 AM</td>
-                    <td>Selesai</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Dr. Jane Smith</td>
-                    <td>2023-06-10</td>
-                    <td>03:30 PM</td>
-                    <td>Menunggu</td>
-                </tr>
+                @foreach ($janji as $janji)
+                    <tr class="white-row">
+                        <td>{{$noJanji++}}</td>
+                        <td>{{$janji->namaDokter}}</td>
+                        <td>{{$janji->tglJanji}}</td>
+                        <td>{{$janji->waktuJanji}}</td>
+                        <td>
+                            @if ($janji->status == "1")
+                               Menunggu
+                            @elseif ($janji->status == "2")
+                                Diterima
+                            @elseif ($janji->status == "0")
+                                Ditolak
+                            @endif
+                        </td>
+                    </tr>
+                @endforeach
                 <!-- tambahkan baris sesuai dengan data yang ada -->
             </tbody>
         </table>
