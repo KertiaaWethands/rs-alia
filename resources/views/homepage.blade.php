@@ -72,45 +72,43 @@
         });
     });
     const testimoniText = document.querySelector(".testimoni .text");
-        const testimoniCarouselControlLeft = document.querySelector("#testimoniCarouselControlLeft");
-        const testimoniCarouselControlRight = document.querySelector("#testimoniCarouselControlRight");
-        let testimoniIndex = 0;
+    const testimoniCarouselControlLeft = document.querySelector("#testimoniCarouselControlLeft");
+    const testimoniCarouselControlRight = document.querySelector("#testimoniCarouselControlRight");
+    let testimoniIndex = 0;
 
-        // Fungsi untuk mengubah testimoni yang ditampilkan
-        function showTestimoni(index) {
-            const testimoniItems = document.querySelectorAll(".testimonial-item");
-            const testimoniWidth = testimoniItems[0].offsetWidth;
+    // Fungsi untuk mengubah testimoni yang ditampilkan
+    function showTestimoni(index) {
+        const testimoniItems = document.querySelectorAll(".testimonial-item");
+        const testimoniWidth = testimoniItems[0].offsetWidth;
 
-            testimoniText.style.transform = `translateX(${-testimoniWidth * index}px)`;
+        testimoniText.style.transform = `translateX(${-testimoniWidth * index}px)`;
+    }
+
+    // Fungsi untuk menampilkan testimoni sebelumnya
+    function showPreviousTestimoni() {
+        testimoniIndex--;
+        if (testimoniIndex < 0) {
+            testimoniIndex = 0;
         }
+        showTestimoni(testimoniIndex);
+    }
 
-        // Fungsi untuk menampilkan testimoni sebelumnya
-        function showPreviousTestimoni() {
-            testimoniIndex--;
-            if (testimoniIndex < 0) {
-                testimoniIndex = 0;
-            }
-            showTestimoni(testimoniIndex);
+    // Fungsi untuk menampilkan testimoni berikutnya
+    function showNextTestimoni() {
+        const testimoniItems = document.querySelectorAll(".testimonial-item");
+        const testimoniWidth = testimoniItems[0].offsetWidth;
+        const maxIndex = testimoniItems.length - 1;
+
+        testimoniIndex++;
+        if (testimoniIndex > maxIndex) {
+            testimoniIndex = maxIndex;
         }
+        showTestimoni(testimoniIndex);
+    }
 
-        // Fungsi untuk menampilkan testimoni berikutnya
-        function showNextTestimoni() {
-            const testimoniItems = document.querySelectorAll(".testimonial-item");
-            const testimoniWidth = testimoniItems[0].offsetWidth;
-            const maxIndex = testimoniItems.length - 1;
-
-            testimoniIndex++;
-            if (testimoniIndex > maxIndex) {
-                testimoniIndex = maxIndex;
-            }
-            showTestimoni(testimoniIndex);
-        }
-
-        // Event listener untuk tombol previous dan next pada testimoni carousel
-        testimoniCarouselControlLeft.addEventListener("click", showPreviousTestimoni);
-        testimoniCarouselControlRight.addEventListener("click", showNextTestimoni);
-
-
+    // Event listener untuk tombol previous dan next pada testimoni carousel
+    testimoniCarouselControlLeft.addEventListener("click", showPreviousTestimoni);
+    testimoniCarouselControlRight.addEventListener("click", showNextTestimoni);
 
 </script>
 
@@ -133,15 +131,16 @@
             <div class="layananUnggulan" id="layananUnggulan">
                 <h2 style="display: flex; justif">Layanan Unggulan</h2>
                 <div class="list">
-                    <img src="icons/layananUnggulan1.svg" alt="layananUnggulan1">
-                    <img src="icons/layananUnggulan2.svg" alt="layananUnggulan2">
-                    <img src="icons/layananUnggulan3.svg" alt="layananUnggulan3">
-                    <img src="icons/layananUnggulan4.svg" alt="layananUnggulan4">
-                    <img src="icons/layananUnggulan5.svg" alt="layananUnggulan5">
-                    <img src="icons/layananUnggulan6.svg" alt="layananUnggulan6">
-                    <img src="icons/layananUnggulan7.svg" alt="layananUnggulan7">
-                    <img src="icons/layananUnggulan8.svg" alt="layananUnggulan8">
-                    <img src="icons/layananUnggulan9.svg" alt="layananUnggulan9">
+                    <a href="/layananUnggulan1"><img src="icons/layananUnggulan1.svg" alt="layananUnggulan1"></a>
+                    <a href="/layananUnggulan2"><img src="icons/layananUnggulan2.svg" alt="layananUnggulan2"></a>
+                    <a href="/layananUnggulan3"><img src="icons/layananUnggulan3.svg" alt="layananUnggulan3"></a>
+                    <a href="/layananUnggulan4"><img src="icons/layananUnggulan4.svg" alt="layananUnggulan4"></a>
+                    <a href="/layananUnggulan5"><img src="icons/layananUnggulan5.svg" alt="layananUnggulan5"></a>
+                    <a href="/layananUnggulan6"><img src="icons/layananUnggulan6.svg" alt="layananUnggulan6"></a>
+                    <a href="/layananUnggulan7"><img src="icons/layananUnggulan7.svg" alt="layananUnggulan7"></a>
+                    <a href="/layananUnggulan8"><img src="icons/layananUnggulan8.svg" alt="layananUnggulan8"></a>
+                    <a href="/layananUnggulan9"><img src="icons/layananUnggulan9.svg" alt="layananUnggulan9"></a>
+
                 </div>
 
             </div>
@@ -149,19 +148,17 @@
             <div class="layananPenunjang" id="layananPenunjang">
                 <h2>Layanan Penunjang</h2>
                 <div class="list">
-                    <img src="icons/layananPenunjang1.svg" alt="layananPenunjang1">
-                    <img src="icons/layananPenunjang2.svg" alt="layananPenunjang2">
-                    <img src="icons/layananPenunjang3.svg" alt="layananPenunjang3">
-
+                    <a href="/layananPenunjang1"><img src="icons/layananPenunjang1.svg" alt="layananPenunjang1"></a>
+                    <a href="/layananPenunjang2"><img src="icons/layananPenunjang2.svg" alt="layananPenunjang2"></a>
+                    <a href="/layananPenunjang3"><img src="icons/layananPenunjang3.svg" alt="layananPenunjang3"></a>
                 </div>
             </div>
             <div class="paketKesehatan" id="paketKesehatan">
                 <h2>Paket Kesehatan</h2>
                 <div class="list">
-                    <img src="icons/paketKesehatan1.svg" alt="paketKesehatan1">
-                    <img src="icons/paketKesehatan2.svg" alt="paketKesehatan2">
-                    <img src="icons/paketKesehatan3.svg" alt="paketKesehatan3">
-
+                    <a href="/paketKesehatan1"><img src="icons/paketKesehatan1.svg" alt="paketKesehatan1"></a>
+                    <a href="/paketKesehatan2"><img src="icons/paketKesehatan2.svg" alt="paketKesehatan2"></a>
+                    <a href="/paketKesehatan3"><img src="icons/paketKesehatan3.svg" alt="paketKesehatan3"></a>
                 </div>
             </div>
 
@@ -179,10 +176,10 @@
                         hipertensi diprediksi melonjak hingga 29% pada tahun 2025. Hipertensi adalah salah satu
                         penyakit silent killer karena peny...</p>
                     <div style="display:flex; justify-content:space-between; color:black;">
-                        <a href="" style="color:black; text-decoration:underline;">
+                        <a href="/artikel" style="color:black; text-decoration:underline;">
                             <p>Check Other Articles</p>
                         </a>
-                        <a href="" style="color:black; text-decoration:underline;">
+                        <a href="artikel1" style="color:black; text-decoration:underline;">
                             <p>See More >>></p>
                         </a>
                     </div>
@@ -214,15 +211,21 @@
                     <h3>Testimoni</h3>
                     <div class="text">
                         <div class="testimonial-item">
-                            <p>Pelayanannya responsif dan sangat profesional. Suasana yang sangat kondusif sehingga merasa aman dan nyaman.</p>
+                            <p>Pelayanannya responsif dan sangat profesional. Suasana yang sangat kondusif sehingga
+                                merasa aman dan nyaman.</p>
                             <p>- Ayu [Pasien]</p>
                         </div>
                         <div class="testimonial-item">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ullamcorper ex, ac tristique libero. Fusce mollis lacus vitae finibus fermentum. Sed ut odio et mauris vestibulum rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ullamcorper ex, ac
+                                tristique libero. Fusce mollis lacus vitae finibus fermentum. Sed ut odio et mauris
+                                vestibulum rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                                fames ac turpis egestas.</p>
                             <p>- John Doe</p>
                         </div>
                         <div class="testimonial-item">
-                            <p>Aliquam erat volutpat. Mauris ac dui nec ligula vestibulum gravida ut vitae lectus. Sed eget tristique tortor, vitae suscipit risus. Integer dapibus ligula id risus hendrerit sagittis. Pellentesque commodo porta risus, eu gravida est ultrices et.</p>
+                            <p>Aliquam erat volutpat. Mauris ac dui nec ligula vestibulum gravida ut vitae lectus. Sed
+                                eget tristique tortor, vitae suscipit risus. Integer dapibus ligula id risus hendrerit
+                                sagittis. Pellentesque commodo porta risus, eu gravida est ultrices et.</p>
                             <p>- Jane Smith</p>
                         </div>
                     </div>
@@ -231,10 +234,10 @@
                 </div>
 
                 <a href="https://www.youtube.com/@Alia_Hospital">
-                <div class="podcast">
-                    <h3>Podcast Kesehatan</h3>
-                    <img src="icons/podcast.svg" alt="podcast">
-                </div>
+                    <div class="podcast">
+                        <h3>Podcast Kesehatan</h3>
+                        <img src="icons/podcast.svg" alt="podcast">
+                    </div>
                 </a>
 
             </div>

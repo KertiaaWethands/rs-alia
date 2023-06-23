@@ -1,0 +1,8 @@
+.imgContent{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.imgContent img{
+    width: 80%;
+}

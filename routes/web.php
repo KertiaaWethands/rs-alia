@@ -52,6 +52,32 @@ Route::get('/approve/{id}', [AdminController::class, 'approve']);
 Route::get('/decline/{id}', [AdminController::class, 'decline']);
 Route::get('/profile/{id}', [AdminController::class, 'profile']);
 
-// use App\Http\Controllers\HalamanController;
+Route::get('/layananUnggulan1', fn () => view('/LayananUnggulan/layananUnggulan1'));
+Route::get('/layananUnggulan2', fn () => view('/LayananUnggulan/layananUnggulan2'));
+Route::get('/layananUnggulan3', fn () => view('/LayananUnggulan/layananUnggulan3'));
+Route::get('/layananUnggulan4', fn () => view('/LayananUnggulan/layananUnggulan4'));
+Route::get('/layananUnggulan5', fn () => view('/LayananUnggulan/layananUnggulan5'));
+Route::get('/layananUnggulan6', fn () => view('/LayananUnggulan/layananUnggulan6'));
+Route::get('/layananUnggulan7', fn () => view('/LayananUnggulan/layananUnggulan7'));
+Route::get('/layananUnggulan8', fn () => view('/LayananUnggulan/layananUnggulan8'));
+Route::get('/layananUnggulan9', fn () => view('/LayananUnggulan/layananUnggulan9'));
 
-// Route::get('/layananUnggulan', [HalamanController::class, 'tampilkanHalaman']);
+Route::get('/layananPenunjang1', fn () => view('/LayananPenunjang/layananPenunjang1'));
+Route::get('/layananPenunjang2', fn () => view('/LayananPenunjang/layananPenunjang2'));
+Route::get('/layananPenunjang3', fn () => view('/LayananPenunjang/layananPenunjang3'));
+
+Route::get('/paketKesehatan1', fn () => view('/PaketKesehatan/paketKesehatan1'));
+Route::get('/paketKesehatan2', fn () => view('/PaketKesehatan/paketKesehatan2'));
+Route::get('/paketKesehatan3', fn () => view('/PaketKesehatan/paketKesehatan3'));
+
+Route::get('/artikel', fn () => view('/Artikel/artikel'));
+Route::get('/artikel1', fn () => view('/Artikel/artikel1'));
+Route::get('/artikel2', fn () => view('/Artikel/artikel2'));
+Route::get('/artikel3', fn () => view('/Artikel/artikel3'));
+Route::get('/artikel4', fn () => view('/Artikel/artikel4'));
+Route::get('/artikel5', fn () => view('/Artikel/artikel5'));
+Route::get('/artikel6', fn () => view('/Artikel/artikel6'));
+Route::get('/artikel7', fn () => view('/Artikel/artikel7'));
+Route::get('/artikel8', fn () => view('/Artikel/artikel8'));
+
+
