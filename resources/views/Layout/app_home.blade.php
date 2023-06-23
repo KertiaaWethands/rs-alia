@@ -154,8 +154,8 @@
         <div class="dropdown">
             <span class="dropbtn">Tentang Kami <i class="fas fa-caret-down"></i></span>
             <div class="dropdown-content">
-                <a href="/nilai-kami">Nilai Kami</a>
-                <a href="/tonggak-sejarah">Tonggak Sejarah</a>
+                <a href="/nilaiKami">Nilai Kami</a>
+                <a href="/tonggakSejarah">Tonggak Sejarah</a>
             </div>
         </div>
         <img src="icons/slogan.svg" alt="slogan" style="width:150px">

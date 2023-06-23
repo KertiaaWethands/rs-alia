@@ -81,3 +81,7 @@ Route::get('/artikel7', fn () => view('/Artikel/artikel7'));
 Route::get('/artikel8', fn () => view('/Artikel/artikel8'));
 
 
+Route::get('/nilaiKami', fn () => view('/tentangkami/nilaiKami'));
+Route::get('/tonggakSejarah', fn () => view('/tentangkami/tonggakSejarah'));
+
+
