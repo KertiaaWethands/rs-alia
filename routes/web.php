@@ -27,6 +27,7 @@ Route::get('/register', [UserController::class, 'indexRegister']);
 Route::post('/register', [UserController::class, 'register']);
 Route::get('/login', [UserController::class, 'indexLogin']);
 Route::post('/login', [UserController::class, 'login']);
+Route::get('/logout', [UserController::class, 'logout']);
 
 Route::get('/profil', [UserController::class, 'profile']);
 Route::post('/update-profile', [UserController::class, 'updateProfile']);
