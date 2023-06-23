@@ -24,7 +24,7 @@ class UserController extends Controller
             'nomor' => 'required|max:12|regex:/^([0-9\s\-\+\(\)]*)$/',
             'password' => 'required|string',
         ]);
-        
+
         User::create([
             'nama' => $request->nama,
             'username' => $request->username,
@@ -73,7 +73,7 @@ class UserController extends Controller
             'nomor' => 'max:12|regex:/^([0-9\s\-\+\(\)]*)$/',
             'foto' => 'image|mimes:png,jpg,jpeg|max:2048',
         ]);
-        
+
         if($request->foto != null){
             $imageName = time().'.'.$request->foto->extension();
             $request->foto->move(public_path('/images'), $imageName);
@@ -95,8 +95,8 @@ class UserController extends Controller
                 'password' => Hash::make($request->password),
             ]);
         }
-        
-        
+
+
 
         return redirect('/profil');
     }
@@ -116,11 +116,11 @@ class UserController extends Controller
     public function logout(Request $request): RedirectResponse
     {
         Auth::logout();
-    
+
         $request->session()->invalidate();
-    
+
         $request->session()->regenerateToken();
-    
+
         return redirect('/login');
     }
 }
