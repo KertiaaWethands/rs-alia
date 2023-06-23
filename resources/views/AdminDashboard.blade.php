@@ -40,19 +40,31 @@
                         <td class="besar-1">
                             {{$janji->tglJanji}}, {{$janji->waktuJanji}}
                         </td>
-                        <td class="besar-1" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">
+                        <td class="besar-1" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:relative;">
                             @if ($janji->status == "1")
                                 <span>
                                     <a href="/approve/{{$janji->id}}" class="approve">Approve</a>
                                 </span>
                                 <span>
-                                    <a href="/decline/{{$janji->id}}" class="decline">Decline</a>
+                                    <button class="decline" id="decline" onclick="openForm()">Decline</button>
                                 </span>
                             @elseif ($janji->status == "2")
                                 Approve
                             @elseif ($janji->status == "0")
                                 Decline
                             @endif
+                            <div class="form-pop" id="myForm">
+                                <form action="/decline" method="POST">
+                                    @csrf
+                                    <input type="text" name="id" value="{{$janji->id}}" hidden readonly>
+                                    <select name="alasan" id="alasan">
+                                        <option selected disabled>Alasan</option>
+                                        <option value="Dokter Berhalangan">Dokter Berhalangan</option>
+                                        <option value="Hari Libur">Hari Libur</option>
+                                    </select>
+                                    <button type="submit">Decline</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach
@@ -104,5 +116,11 @@
             </table>
         </div>
     </div>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+          document.getElementById("decline").style.display = "none";
+        }
+        </script>
 </body>
 </html>

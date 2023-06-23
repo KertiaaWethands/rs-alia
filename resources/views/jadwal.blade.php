@@ -150,22 +150,25 @@
         </div>
     </div>
     <div class="dokter">
-  @for($i = 1; $i <= 10; $i++)
-    <div class="card">
-      <div class="list-dokter">
-        <img src="icons/dokter.svg" alt="dokter">
-        <div class="kata">
-          <h2>dr. Amalia Rositawati, Sp.DV</h2>
-          <h3>Kulit dan Kelamin</h3>
-          <ul>
-            <li>Selasa (13.00 - 17.00)</li>
-            <li>Kamis (13.00 - 17.00)</li>
-          </ul>
+    @foreach ($dokter as $dokter)
+        <div class="card">
+            <form action="/buatjanji2" method="POST">
+                @csrf
+                <input type="text" name="dokter" id="dokter" value="{{$dokter->id}}" hidden>
+                <div class="list-dokter">
+                    <img src="images/{{$dokter->foto}}" alt="dokter">
+                    <div class="kata">
+                        <h2>{{$dokter->namaDokter}}</h2>
+                        <h3>{{$dokter->spesialis}}</h3>
+                        <ul>
+                        <li>{{$dokter->hari}} ({{$dokter->waktuAwal}} - {{$dokter->waktuAkhir}})</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <button type="submit">Buat Janji Temu</button>
+            </form>
         </div>
-      </div>
-      <a href="/buatjanji2"><button>Buat Janji Temu</button></a>
-    </div>
-  @endfor
+    @endforeach
 </div>
 
 

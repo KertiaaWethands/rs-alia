@@ -92,3 +92,9 @@
     cursor: pointer;
     border-radius: 25px;
   }
+
+  .list-dokter img{
+    width: 180px;
+    height: 180px;
+    border: 1px solid;
+  }

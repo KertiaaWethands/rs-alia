@@ -99,11 +99,12 @@
                         <td>{{$janji->waktuJanji}}</td>
                         <td>
                             @if ($janji->status == "1")
-                               Menunggu
+                               Menunggu <a href="/batal/{{$janji->id}}" class="Batal">X</a>
                             @elseif ($janji->status == "2")
                                 Diterima
                             @elseif ($janji->status == "0")
-                                Ditolak
+                                Ditolak <p class="info">i</p>
+                                <p class="theInfo">{{ $janji->alasan }}</p>
                             @endif
                         </td>
                     </tr>
