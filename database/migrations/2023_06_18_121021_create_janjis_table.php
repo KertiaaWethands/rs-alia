@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tglJanji');
             $table->string('waktuJanji');
             $table->string('status');
+            $table->string('alasan')->nullable();
             $table->timestamps();
         });
     }

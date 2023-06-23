@@ -139,5 +139,31 @@
     background-color: #D0E8E5;
 }
 
+.theInfo{
+    display: none;
+}
+
+.info{
+    display:inline; 
+    font-size: 20px;
+    padding: 1px 9px;
+    border-radius: 50px;
+    border: 1px solid;
+}
+
+.Batal{
+    display:inline; 
+    border: 1px solid;
+    font-size: 20px;
+    padding: 1px 5px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.info:hover + .theInfo{
+    display: block;
+    color: red;
+}
 
 

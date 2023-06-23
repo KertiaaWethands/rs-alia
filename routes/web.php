@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn () => view('homepage'));
 
-Route::get('/jadwal', fn () => view('jadwal'));
-
 Route::get('/home', function () {
     return view('homepage');
 });
@@ -32,6 +30,8 @@ Route::post('/login', [UserController::class, 'login']);
 
 Route::get('/profil', [UserController::class, 'profile']);
 Route::post('/update-profile', [UserController::class, 'updateProfile']);
+Route::get('/batal/{id}', [UserController::class, 'batal']);
+Route::get('/jadwal', [UserController::class, 'jadwal']);
 
 Route::get('/buatjanji', [JanjiController::class, 'indexJanji'])->middleware('auth');
 Route::post('/buatjanji2', [JanjiController::class, 'pilihWaktu']);
@@ -49,7 +49,7 @@ Route::get('/update/{id}', [DokterController::class, 'indexUpdateDokter']);
 Route::post('/update', [DokterController::class, 'updateDokter']);
 Route::get('/delete/{id}', [DokterController::class, 'deleteDokter']);
 Route::get('/approve/{id}', [AdminController::class, 'approve']);
-Route::get('/decline/{id}', [AdminController::class, 'decline']);
+Route::post('/decline', [AdminController::class, 'decline']);
 Route::get('/profile/{id}', [AdminController::class, 'profile']);
 
 Route::get('/layananUnggulan1', fn () => view('/LayananUnggulan/layananUnggulan1'));

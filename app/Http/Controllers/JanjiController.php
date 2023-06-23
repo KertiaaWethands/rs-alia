@@ -18,6 +18,7 @@ class JanjiController extends Controller
     }
 
     function pilihWaktu(Request $request) {
+
         $dokter = Dokter::where('id', $request->dokter)->first();
 
         return view('buatjanji2', ['dokter' => $dokter]);

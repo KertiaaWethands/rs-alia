@@ -90,4 +90,36 @@ table tr:nth-child(odd){
     border: 1px solid;
     margin: 5px;
     text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.decline:hover{
+    background-color: #b84f4f;
+}
+
+.form-pop{
+    display: none;
+}
+
+.form-pop button{
+    padding: 5px 30px;
+    background-color: #D16A6A;
+    border-radius: 20px;
+    border: 1px solid;
+    margin-top: 20px;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.form-pop button:hover{
+    background-color: #b84f4f;
+}
+
+.form-pop select{
+    width: 250px;
+    padding: 5px 5px;
+    border-radius: 20px;
+    border: 1px solid;
+    margin-top: 20px;
+    text-decoration: none;
 }

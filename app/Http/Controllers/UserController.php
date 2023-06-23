@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dokter;
 use App\Models\Janji;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -41,10 +42,18 @@ class UserController extends Controller
     public function login(Request $request){
         $cekUser = Auth::attempt(['username' => $request->username, 'password' => $request->password]);
 
-        if($cekUser){
-            return view('homepage');
+        if($request->username == 'adminAlia'){
+            if($cekUser){
+                return redirect('/admin');
+            }else{
+                return redirect('/login');
+            }
         }else{
-            return redirect('/login');
+            if($cekUser){
+                return view('homepage');
+            }else{
+                return redirect('/login');
+            }
         }
     }
 
@@ -87,6 +96,18 @@ class UserController extends Controller
         }
         
         
+
+        return redirect('/profil');
+    }
+
+    public function jadwal(){
+        $dokter = Dokter::get();
+
+        return view ('jadwal', ['dokter' => $dokter]);
+    }
+
+    public function batal($id){
+        Janji::where('id', $id)->delete();
 
         return redirect('/profil');
     }
