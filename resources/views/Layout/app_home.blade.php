@@ -53,7 +53,8 @@
         /* Hide the dropdown content by default */
         .dropdown-content {
             display: none;
-            position: absolute; /* Added to position the dropdown content */
+            position: absolute;
+            /* Added to position the dropdown content */
             background-color: #f9f9f9;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -65,6 +66,9 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+        }
+        .navbar a {
+            text-decoration: none;
         }
 
     </style>
@@ -126,12 +130,16 @@
             </button>
         </div>
         <div>
-            <a href="{{ Auth::check() ? '/profil' : '/register' }}" class="user">
+            @if(Auth::check())
+            <a href="/profil" class="user">
                 <img src="icons/user.svg" alt="user-icon">
             </a>
-            <a href="/logout">
-                Logout
+            <a href="/logout"><img class="logout" src="images/logout.png" alt=""></a>
+            @else
+            <a href="/register" class="user">
+                <img src="icons/user.svg" alt="user-icon">
             </a>
+            @endif
         </div>
     </div>
 
@@ -140,7 +148,7 @@
         <a href="/" style="text-decoration: none; color:black">
             <img src="icons/logo.svg" alt="logo" style="width:150px">
         </a>
-        <p>Lokasi Rumah Sakit</p>
+        <a href="/lokasi"><p style="color: black;padding: 12px 16px;text-decoration: none;display: block;">Lokasi Rumah Sakit</p></a>
         <div class="dropdown">
             <span class="dropbtn">Cari Dokter <i class="fas fa-caret-down"></i></span>
             <div class="dropdown-content">
@@ -178,7 +186,8 @@
             <div class="sosmed">
                 <a href="https://www.youtube.com/@Alia_Hospital"><img src="icons/yt.svg" alt="yt"></a>
                 <a href="https://www.instagram.com/alia.hospital/"><img src="icons/ig.svg" alt="ig"></a>
-                <a href="https://api.whatsapp.com/send?phone=6281133339000&text=Hallo..%20,%20Alia%20Hospital%20"><img src="icons/wa.svg" alt="wa"></a>
+                <a href="https://api.whatsapp.com/send?phone=6281133339000&text=Hallo..%20,%20Alia%20Hospital%20"><img
+                        src="icons/wa.svg" alt="wa"></a>
                 <img src="icons/fb.svg" alt="fb">
             </div>
             <p>Jl. Kartini No.2, Kec. Pancoran Mas, Kota Depok</p>

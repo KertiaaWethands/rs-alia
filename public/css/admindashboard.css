@@ -50,7 +50,7 @@ th{
 .table-1 td{
     text-align: center;
     padding: 10px 0;
-}  
+}
 
 table tr:nth-child(even){
     background-color: #FFFFFF;
@@ -58,12 +58,12 @@ table tr:nth-child(even){
 
 table tr:nth-child(odd){
     background-color: #D0E8E5;
-}  
+}
 
 .table-2 td{
     text-align: center;
     height: 100px;
-} 
+}
 
 .button-title-2{
     border-radius: 100%;
@@ -122,4 +122,8 @@ table tr:nth-child(odd){
     border: 1px solid;
     margin-top: 20px;
     text-decoration: none;
+}
+.logout{
+    width: 30px;
+    margin-right: 20px;
 }

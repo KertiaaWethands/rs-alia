@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="/css/admindashboard.css">
     <script src="https://kit.fontawesome.com/88c065724b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <a href="/logout"><img class="logout" src="images/logout.png" alt=""></a>
     <div class="content-1">
         <div class="title-1" style="text-align: center; text-decoration:underline">
             Permintaan Janji Temu Dokter</p>
@@ -21,52 +24,55 @@
                     <th class="kecil-1">WA</th>
                     <th class="besar-1">Nama Dokter</th>
                     <th class="besar-1">Tanggal & Waktu Kunjungan</th>
-                    <th class="besar-1" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">Status</th>
+                    <th class="besar-1" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">Status
+                    </th>
                 </tr>
                 @foreach ($janji as $janji)
-                    <tr>
-                        <td class="kecil-1" style="border-top-left-radius:10px; border-bottom-left-radius:10px;">
-                            {{ $idjanji++ }}
-                        </td>
-                        <td class="besar-1">
-                            <a href="/profile/{{$janji->idPengguna}}">{{ $janji->nama }}</a>
-                        </td>
-                        <td class="kecil-1">
-                            <a href="https://wa.me/{{$janji->nomor}}" target="_blank" class="logo-wa"><i class="fa-brands fa-whatsapp"></i></a>
-                        </td>
-                        <td class="besar-1">
-                            {{ $janji->namaDokter }}
-                        </td>
-                        <td class="besar-1">
-                            {{$janji->tglJanji}}, {{$janji->waktuJanji}}
-                        </td>
-                        <td class="besar-1" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:relative;">
-                            @if ($janji->status == "1")
-                                <span>
-                                    <a href="/approve/{{$janji->id}}" class="approve">Approve</a>
-                                </span>
-                                <span>
-                                    <button class="decline" id="decline" onclick="openForm()">Decline</button>
-                                </span>
-                            @elseif ($janji->status == "2")
-                                Approve
-                            @elseif ($janji->status == "0")
-                                Decline
-                            @endif
-                            <div class="form-pop" id="myForm">
-                                <form action="/decline" method="POST">
-                                    @csrf
-                                    <input type="text" name="id" value="{{$janji->id}}" hidden readonly>
-                                    <select name="alasan" id="alasan">
-                                        <option selected disabled>Alasan</option>
-                                        <option value="Dokter Berhalangan">Dokter Berhalangan</option>
-                                        <option value="Hari Libur">Hari Libur</option>
-                                    </select>
-                                    <button type="submit">Decline</button>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
+                <tr>
+                    <td class="kecil-1" style="border-top-left-radius:10px; border-bottom-left-radius:10px;">
+                        {{ $idjanji++ }}
+                    </td>
+                    <td class="besar-1">
+                        <a href="/profile/{{$janji->idPengguna}}">{{ $janji->nama }}</a>
+                    </td>
+                    <td class="kecil-1">
+                        <a href="https://wa.me/{{$janji->nomor}}" target="_blank" class="logo-wa"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </td>
+                    <td class="besar-1">
+                        {{ $janji->namaDokter }}
+                    </td>
+                    <td class="besar-1">
+                        {{$janji->tglJanji}}, {{$janji->waktuJanji}}
+                    </td>
+                    <td class="besar-1"
+                        style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:relative;">
+                        @if ($janji->status == "1")
+                        <span>
+                            <a href="/approve/{{$janji->id}}" class="approve">Approve</a>
+                        </span>
+                        <span>
+                            <button class="decline" id="decline" onclick="openForm()">Decline</button>
+                        </span>
+                        @elseif ($janji->status == "2")
+                        Approve
+                        @elseif ($janji->status == "0")
+                        Decline
+                        @endif
+                        <div class="form-pop" id="myForm">
+                            <form action="/decline" method="POST">
+                                @csrf
+                                <input type="text" name="id" value="{{$janji->id}}" hidden readonly>
+                                <select name="alasan" id="alasan">
+                                    <option selected disabled>Alasan</option>
+                                    <option value="Dokter Berhalangan">Dokter Berhalangan</option>
+                                    <option value="Hari Libur">Hari Libur</option>
+                                </select>
+                                <button type="submit">Decline</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
                 @endforeach
             </table>
         </div>
@@ -84,43 +90,46 @@
                     <th class="kecil-2">Foto</th>
                     <th class="besar-2">Spesialis</th>
                     <th class="besar-2">Jadwal Praktek</th>
-                    <th class="besar-2" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">Action</th>
+                    <th class="besar-2" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">Action
+                    </th>
                 </tr>
                 @foreach ($dokter as $dokter)
-                    <tr>
-                        <td class="kecil-2" style="border-top-left-radius:10px; border-bottom-left-radius:10px;">
-                            {{ $idDokter++ }}
-                        </td>
-                        <td class="besar-2">
-                            {{$dokter->namaDokter}}
-                        </td>
-                        <td class="kecil-2">
-                            <img src="/images/{{$dokter->foto}}" alt="Foto Dokter" style="width: 80px; height:80px">
-                        </td>
-                        <td class="besar-2">
-                            {{$dokter->spesialis}}
-                        </td>
-                        <td class="besar-2">
-                            {{$dokter->hari}}, {{$dokter->waktuAwal}} - {{$dokter->waktuAkhir}}
-                        </td>
-                        <td class="besar-2" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">
-                            <div>
-                                <a href="/update/{{$dokter->id}}" class="update">Update</a>
-                            </div>
-                            <div style="margin-top: 20px">
-                                <a href="/delete/{{$dokter->id}}" class="delete">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
+                <tr>
+                    <td class="kecil-2" style="border-top-left-radius:10px; border-bottom-left-radius:10px;">
+                        {{ $idDokter++ }}
+                    </td>
+                    <td class="besar-2">
+                        {{$dokter->namaDokter}}
+                    </td>
+                    <td class="kecil-2">
+                        <img src="/images/{{$dokter->foto}}" alt="Foto Dokter" style="width: 80px; height:80px">
+                    </td>
+                    <td class="besar-2">
+                        {{$dokter->spesialis}}
+                    </td>
+                    <td class="besar-2">
+                        {{$dokter->hari}}, {{$dokter->waktuAwal}} - {{$dokter->waktuAkhir}}
+                    </td>
+                    <td class="besar-2" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">
+                        <div>
+                            <a href="/update/{{$dokter->id}}" class="update">Update</a>
+                        </div>
+                        <div style="margin-top: 20px">
+                            <a href="/delete/{{$dokter->id}}" class="delete">Delete</a>
+                        </div>
+                    </td>
+                </tr>
                 @endforeach
             </table>
         </div>
     </div>
     <script>
         function openForm() {
-          document.getElementById("myForm").style.display = "block";
-          document.getElementById("decline").style.display = "none";
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("decline").style.display = "none";
         }
-        </script>
+
+    </script>
 </body>
+
 </html>
