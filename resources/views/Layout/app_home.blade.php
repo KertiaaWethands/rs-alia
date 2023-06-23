@@ -125,9 +125,14 @@
                 <img src="icons/callcenter.svg" alt="callcenter-icon">
             </button>
         </div>
-        <a href="{{ Auth::check() ? '/profil' : '/register' }}" class="user">
-            <img src="icons/user.svg" alt="user-icon">
-        </a>
+        <div>
+            <a href="{{ Auth::check() ? '/profil' : '/register' }}" class="user">
+                <img src="icons/user.svg" alt="user-icon">
+            </a>
+            <a href="/logout">
+                Logout
+            </a>
+        </div>
     </div>
 
 
