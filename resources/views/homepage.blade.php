@@ -71,6 +71,7 @@
             });
         });
     });
+    document.addEventListener('DOMContentLoaded', function () {
     const testimoniText = document.querySelector(".testimoni .text");
     const testimoniCarouselControlLeft = document.querySelector("#testimoniCarouselControlLeft");
     const testimoniCarouselControlRight = document.querySelector("#testimoniCarouselControlRight");
@@ -109,6 +110,8 @@
     // Event listener untuk tombol previous dan next pada testimoni carousel
     testimoniCarouselControlLeft.addEventListener("click", showPreviousTestimoni);
     testimoniCarouselControlRight.addEventListener("click", showNextTestimoni);
+});
+
 
 </script>
 
@@ -121,8 +124,8 @@
         <img src="images/carousel1.jpg" alt="carousell2">
         <img src="images/carousel.jpg" alt="carousell3">
     </div>
-    <div class="carousel-control left" id="carouselControlLeft">&lt;</div>
-    <div class="carousel-control right" id="carouselControlRight">&gt;</div>
+    <div class="carouselControlLeft carouselControl" id="carouselControlLeft"><img src="icons/next.svg" alt=""></div>
+    <div class="carouselControlRight carouselControl" id="carouselControlRight"><img src="icons/prev.svg" alt=""></div>
 
 
     <div class="container">
@@ -228,10 +231,13 @@
                                 sagittis. Pellentesque commodo porta risus, eu gravida est ultrices et.</p>
                             <p>- Jane Smith</p>
                         </div>
+
+
                     </div>
-                    <div class="carousel-control left" id="testimoniCarouselControlLeft">&lt;</div>
-                    <div class="carousel-control right" id="testimoniCarouselControlRight">&gt;</div>
                 </div>
+
+                <div class="carousel-control left" id="testimoniCarouselControlLeft"><img src="icons/next.svg" alt=""></div>
+                    <div class="carousel-control right" id="testimoniCarouselControlRight"><img src="icons/prev.svg" alt=""></div>
 
                 <a href="https://www.youtube.com/@Alia_Hospital">
                     <div class="podcast">

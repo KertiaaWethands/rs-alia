@@ -15,7 +15,7 @@
     display: block;
   }
 
-  .carousel-control {
+  .carouselControl {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -32,15 +32,12 @@
     transition: background-color 0.3s;
 }
 
-.carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
-.carousel-control.left {
+.carouselControlLeft {
     left: 100px;
 }
 
-.carousel-control.right {
+.carouselControlRight {
     right: 100px;
 }
 
@@ -136,10 +133,11 @@
 }
 
 .testimoni {
-    width: 90%;
+    width: 100%;
     margin: 30px;
     position: relative;
     overflow: hidden;
+    border: 1px solid black;
 }
 
 .testimoni h3 {
@@ -149,12 +147,13 @@
 .testimoni .text {
     display: flex;
     transition: transform 0.3s ease;
+    word-wrap: break-word;
 }
 
 .testimonial-item {
     flex-shrink: 0;
-    width: 100%;
-    padding: 20px;
+    width: 70%;
+    padding: 40px;
     background-color: #40988F;
     color: white;
     text-align: center;
@@ -164,33 +163,27 @@
     margin-bottom: 10px;
 }
 
-.testimoni.carousel-control {
+.carousel-control {
     position: absolute;
-    top: 50%;
+    top: 73%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.testimoni.carousel-control:hover {
+/* .testimoni.carousel-control:hover {
     background-color: rgba(0, 0, 0, 0.8);
+} */
+.carousel-control  img{
+    width: 30px;
 }
-
-.testimoni.carousel-control.left {
-    left: 0;
+.carousel-control.left{
+    left: 10%;
 }
-
-.testimoni.carousel-control.right {
-    right: 0;
+.carousel-control.right{
+    right: 3%;
 }
 
 
