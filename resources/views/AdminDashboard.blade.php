@@ -48,7 +48,6 @@
 
 <body>
     <a href="/logout"><img class="logout" src="images/logout.png" alt=""></a>
-    <a href="/adminProfile">Admin Profile</a>
     <div class="content-1">
         <div class="title-1" style="text-align: center; text-decoration:underline">
             Permintaan Janji Temu Dokter</p>

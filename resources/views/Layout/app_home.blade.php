@@ -12,66 +12,6 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <style>
-        /* Add the styles for the popup */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
-        }
-
-        /* Add the styles to blur the background outside the popup */
-        .popup-open #nav,
-        .popup-open #navbar {
-            filter: blur(4px);
-        }
-
-        /* Add the styles to blur the background */
-        .popup-open::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 9998;
-        }
-
-        /* Add the styles to display the dropdown on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Hide the dropdown content by default */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            /* Added to position the dropdown content */
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .navbar a {
-            text-decoration: none;
-        }
-
-    </style>
     <script>
         // Function to show the popup
         function showPopup(buttonType) {
@@ -148,7 +88,9 @@
         <a href="/" style="text-decoration: none; color:black">
             <img src="icons/logo.svg" alt="logo" style="width:150px">
         </a>
-        <a href="/lokasi"><p style="color: black;padding: 12px 16px;text-decoration: none;display: block;">Lokasi Rumah Sakit</p></a>
+        <a href="/lokasi">
+            <p style="color: black;padding: 12px 16px;text-decoration: none;display: block;">Lokasi Rumah Sakit</p>
+        </a>
         <div class="dropdown">
             <span class="dropbtn">Cari Dokter <i class="fas fa-caret-down"></i></span>
             <div class="dropdown-content">
@@ -161,7 +103,7 @@
             <div class="dropdown-content">
                 <a href="/#layananUnggulan">Layanan Unggulan</a>
                 <a href="/#layananPenunjang">Layanan Penunjang</a>
-                <a href="/paket-kesehatan">Paket Kesehatan</a>
+                <a href="/#paketKesehatan">Paket Kesehatan</a>
             </div>
         </div>
         <div class="dropdown">
@@ -194,20 +136,24 @@
         </div>
         <div class="tentang">
             <h4>Tentang Kami</h4>
-            <p>Nilai kami</p>
-            <p>Tonggak Sejarah</p>
+            <a href="/nilaiKami"><p>Nilai Kami</p></a>
+            <a href="/tonggakSejarah"><p>Tonggak Sejarah</p></a>
         </div>
         <div class="layanan">
             <h4>Layanan</h4>
-            <p>Layanan Unggulan</p>
-            <p>Layanan Penunjang</p>
-            <p>Janji Temu Dokter</p>
+            <a href="/#layananUnggulan"><p>Layanan Unggulan</p></a>
+            <a href="/#layananPenunjang"><p>Layanan Penunjang</p></a>
+            <a href="/buatjanji"><p>Janji Temu Dokter</p></a>
         </div>
         <div class="info">
+
+
             <h4>Informasi Lain</h4>
-            <p>Paket Kesehatan</p>
-            <p>Artikel Kesehatan</p>
-            <p>Podcast Kesehatan</p>
+            <a href="/#paketKesehatan"><p>Paket Kesehatan</p></a>
+            <a href="/artikel"><p>Artikel</p></a>
+            <a href="https://www.youtube.com/@Alia_Hospital">
+                <p>Podcast Kesehatan</p>
+            </a>
         </div>
     </div>
 

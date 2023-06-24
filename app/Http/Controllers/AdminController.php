@@ -13,13 +13,13 @@ class AdminController extends Controller
     public function indexAdmin(){
         if(Auth::user()->username == 'adminAlia'){
             $janji = Janji::join('users', 'janjis.idPengguna', '=', 'users.id')->get([
-                'users.nama', 'users.nomor', 'janjis.namaDokter', 'janjis.tglJanji', 'janjis.waktuJanji', 'janjis.id', 'janjis.status'
+                'users.nama', 'users.nomor', 'janjis.namaDokter', 'janjis.tglJanji', 'janjis.waktuJanji', 'janjis.id', 'janjis.status', 'janjis.idPengguna'
             ]);
             $idjanji = 1;
-    
+
             $dokter = Dokter::get();
             $idDokter = 1;
-    
+
             return view('AdminDashboard', ['janji' => $janji, 'idjanji' => $idjanji, 'dokter' => $dokter, 'idDokter' => $idDokter]);
         }else{
             return redirect()->back();
@@ -46,7 +46,7 @@ class AdminController extends Controller
             $user = User::where('id', $id)->first();
             $janji = Janji::where('idPengguna', $id)->get();
             $idjanji = 1;
-        
+
         return view('adminProfile', ['user' => $user, 'janji' => $janji, 'idjanji' => $idjanji]);
         }else{
             return redirect()->back();

@@ -23,3 +23,11 @@
     width: 25px;
     margin-top: 8px;
 }
+a{
+    text-decoration: none;
+}
+.footer a p{
+    color: white;
+    text-decoration: none;
+    display: block;
+}

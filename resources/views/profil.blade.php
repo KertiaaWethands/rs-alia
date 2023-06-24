@@ -28,7 +28,7 @@
                         @error('nama')
                                 <div>{{$message}}</div>
                         @enderror
-    
+
                         <div class="form">
                             <label for="username">Username:</label>
                             <input type="text" id="username" name="username" value="{{ $user->username }}">
@@ -36,7 +36,7 @@
                         @error('username')
                                 <div>{{$message}}</div>
                         @enderror
-    
+
                         <div class="form">
                             <label for="tanggal_lahir">Tanggal Lahir:</label>
                             <input type="date" id="tanggal_lahir" name="tanggal_lahir" value="{{ $user->tglLahir }}">
@@ -44,7 +44,7 @@
                         @error('tanggal_lahir')
                                 <div>{{$message}}</div>
                         @enderror
-    
+
                         <div class="form">
                             <label for="whatsapp">No Whatsapp:</label>
                             <input type="text" id="whatsapp" name="whatsapp" value="{{ $user->nomor }}">
@@ -52,7 +52,7 @@
                         @error('whatsapp')
                                 <div>{{$message}}</div>
                         @enderror
-    
+
                         <div class="form">
                             <label for="password">Buat Kata Sandi Baru:</label>
                             <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi Terbaru">
@@ -103,7 +103,7 @@
                             @elseif ($janji->status == "2")
                                 Diterima
                             @elseif ($janji->status == "0")
-                                Ditolak <p class="info">i</p>
+                                Ditolak <p class="infoJanji">i</p>
                                 <p class="theInfo">{{ $janji->alasan }}</p>
                             @endif
                         </td>

@@ -11,3 +11,61 @@
     font-family: 'gentium';
     background-color: white;
 }
+ /* Add the styles for the popup */
+ .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+/* Add the styles to blur the background outside the popup */
+.popup-open #nav,
+.popup-open #navbar {
+    filter: blur(4px);
+}
+
+/* Add the styles to blur the background */
+.popup-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+}
+
+/* Add the styles to display the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* Added to position the dropdown content */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar a {
+    text-decoration: none;
+}
