@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dokter;
+use App\Models\jadwal;
 use App\Models\Janji;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -103,8 +104,9 @@ class UserController extends Controller
 
     public function jadwal(){
         $dokter = Dokter::get();
+        $jadwal = jadwal::get();
 
-        return view ('jadwal', ['dokter' => $dokter]);
+        return view ('jadwal', ['dokter' => $dokter, 'jadwal' => $jadwal]);
     }
 
     public function batal($id){

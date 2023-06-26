@@ -30,7 +30,12 @@
                             <input type="date" name="tglJanji" placeholder="Pilih Tanggal">
                         </div>
                         <div class="option">
-                            <input type="text" name="waktuJanji" value="{{$dokter->waktuAwal}}" readonly>
+                            <select name="waktuJanji" id="waktuJanji">
+                                <option selected disabled>Pilih Waktu yang Tersedia</option>
+                                @foreach ($jadwal as $jadwal)
+                                    <option value="{{ $jadwal->waktuAwal }}">{{ $jadwal->waktuAwal }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="button">

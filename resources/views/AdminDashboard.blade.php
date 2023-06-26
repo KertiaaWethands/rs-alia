@@ -144,7 +144,12 @@
                         {{$dokter->spesialis}}
                     </td>
                     <td class="besar-2">
-                        {{$dokter->hari}}, {{$dokter->waktuAwal}} - {{$dokter->waktuAkhir}}
+                        @foreach ($jadwal as $jadwal)
+                            @if ($dokter->id == $jadwal->idDokter)
+                                {{$jadwal->hari}}, {{$jadwal->waktuAwal}} - {{$jadwal->waktuAkhir}}
+                                <br>
+                            @endif
+                        @endforeach
                     </td>
                     <td class="besar-2" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">
                         <div>
@@ -152,6 +157,9 @@
                         </div>
                         <div style="margin-top: 20px">
                             <a href="/delete/{{$dokter->id}}" class="delete">Delete</a>
+                        </div>
+                        <div style="margin-top: 20px">
+                            <a href="/addJadwal/{{$dokter->id}}" class="update">+ Jadwal</a>
                         </div>
                     </td>
                 </tr>

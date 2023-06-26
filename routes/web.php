@@ -52,6 +52,8 @@ Route::get('/delete/{id}', [DokterController::class, 'deleteDokter']);
 Route::get('/approve/{id}', [AdminController::class, 'approve']);
 Route::post('/decline', [AdminController::class, 'decline']);
 Route::get('/profile/{id}', [AdminController::class, 'profile']);
+Route::get('/addJadwal/{id}', [AdminController::class, 'indexJadwal']);
+Route::post('/addJadwal', [AdminController::class, 'tambahJadwal']);
 
 Route::get('/layananUnggulan1', fn () => view('/LayananUnggulan/layananUnggulan1'));
 Route::get('/layananUnggulan2', fn () => view('/LayananUnggulan/layananUnggulan2'));

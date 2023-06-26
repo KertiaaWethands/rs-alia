@@ -161,7 +161,11 @@
                         <h2>{{$dokter->namaDokter}}</h2>
                         <h3>{{$dokter->spesialis}}</h3>
                         <ul>
-                        <li>{{$dokter->hari}} ({{$dokter->waktuAwal}} - {{$dokter->waktuAkhir}})</li>
+                            @foreach ($jadwal as $jadwal)
+                                @if ($dokter->id == $jadwal->idDokter)
+                                    <li>{{$jadwal->hari}} ({{$jadwal->waktuAwal}} - {{$jadwal->waktuAkhir}})</li>
+                                @endif
+                            @endforeach
                         </ul>
                     </div>
                     </div>
