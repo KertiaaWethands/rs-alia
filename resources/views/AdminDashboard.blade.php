@@ -144,9 +144,9 @@
                         {{$dokter->spesialis}}
                     </td>
                     <td class="besar-2">
-                        @foreach ($jadwal as $jadwal)
-                            @if ($dokter->id == $jadwal->idDokter)
-                                {{$jadwal->hari}}, {{$jadwal->waktuAwal}} - {{$jadwal->waktuAkhir}}
+                        @foreach ($jadwal as $item)
+                            @if ($dokter->id == $item->idDokter)
+                                {{$item->hari}}, {{$item->waktuAwal}} - {{$item->waktuAkhir}}
                                 <br>
                             @endif
                         @endforeach
