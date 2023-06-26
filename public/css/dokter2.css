@@ -1,0 +1,60 @@
+body{
+    background-image: url("/icons/bg-schedule.svg");
+}
+
+.container{
+    width: 480px;
+    height: 420px;
+}
+
+.form{
+    width: 480px;
+    height: 425px;
+    background-color: #40988F;
+    margin: 12% 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 15px;
+    border: solid 1px;
+}
+
+.login-contain{
+    margin: 25px 0;
+    padding-inline: 15px;
+}
+
+.text-title{
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.input-data input{
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 12px 0;
+    padding-inline: 15px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.input-data select{
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 12px 0;
+    padding-inline: 15px;
+    font-size: 18px;
+}
+.input-data input::placeholder{
+    font-size: 18px;
+}
+
+.button button{
+    width: 156px;
+    height: 44px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 30px;
+}

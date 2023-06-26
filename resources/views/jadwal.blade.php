@@ -148,6 +148,7 @@
 
         </div>
     </div>
+
     <div class="container">
         @foreach($dokter as $dokter)
         <div class="card" data-nama="{{$dokter->namaDokter}}" data-hari="{{$dokter->hari}}" data-spesialis="{{$dokter->spesialis}}">
@@ -156,10 +157,17 @@
                 <h3 class="card-title">{{$dokter->namaDokter}}</h3>
 
                 <p class="card-text">{{$dokter->spesialis}}</p>
-                <p class="card-text">{{$dokter->hari}} ({{$dokter->waktuAwal}} - {{$dokter->waktuAkhir}})</p>
+                <ul>
+                            @foreach ($jadwal as $jadwal)
+                                @if ($dokter->id == $jadwal->idDokter)
+                                    <li>{{$jadwal->hari}} ({{$jadwal->waktuAwal}} - {{$jadwal->waktuAkhir}})</li>
+                                @endif
+                            @endforeach
+                        </ul>
                 <form action="/buatjanji2" method="POST">
                     @csrf
                     <input type="text" name="dokter" id="dokter" value="{{$dokter->id}}" hidden>
+
                     <button type="submit">Buat Janji Temu</button>
                 </form>
             </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dokter;
+use App\Models\jadwal;
 use Illuminate\Http\Request;
 
 class DokterController extends Controller
@@ -15,7 +16,6 @@ class DokterController extends Controller
         $request->validate([
             'nama' => 'required|string',
             'foto' => 'required|image|mimes:png,jpg,jpeg|max:2048',
-            'spesialis' => 'required|string',
             'hari' => 'required|string',
             'waktuAwal' => 'required|date_format:H:i',
             'waktuAkhir' => 'required|date_format:H:i|after:waktuAwal',
@@ -28,6 +28,15 @@ class DokterController extends Controller
             'namaDokter' => $request->nama,
             'foto' => $imageName,
             'spesialis' => $request->spesialis,
+            'hari' => $request->hari,
+            'waktuAwal' => $request->waktuAwal,
+            'waktuAkhir' => $request->waktuAkhir,
+        ]);
+
+        $dokter = Dokter::where('namaDokter' ,$request->nama)->first();
+
+        jadwal::create([
+            'idDokter' => $dokter->id,
             'hari' => $request->hari,
             'waktuAwal' => $request->waktuAwal,
             'waktuAkhir' => $request->waktuAkhir,

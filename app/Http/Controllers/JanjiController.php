@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dokter;
+use App\Models\jadwal;
 use App\Models\Janji;
 use Illuminate\Foundation\Bootstrap\RegisterFacades;
 use Illuminate\Http\Request;
@@ -20,8 +21,9 @@ class JanjiController extends Controller
     function pilihWaktu(Request $request) {
 
         $dokter = Dokter::where('id', $request->dokter)->first();
+        $jadwal = jadwal::where('idDokter', $request->dokter)->get();
 
-        return view('buatjanji2', ['dokter' => $dokter]);
+        return view('buatjanji2', ['dokter' => $dokter, 'jadwal' => $jadwal]);
     }
 
     function buatJanji(Request $request) {
