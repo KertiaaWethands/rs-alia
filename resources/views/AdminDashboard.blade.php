@@ -145,10 +145,8 @@
                     </td>
                     <td class="besar-2">
                         @foreach ($jadwal as $jadwal)
-                            @if ($dokter->id == $jadwal->idDokter)
-                                {{$jadwal->hari}}, {{$jadwal->waktuAwal}} - {{$jadwal->waktuAkhir}}
-                                <br>
-                            @endif
+                            {{$jadwal->hari}}, {{$jadwal->waktuAwal}} - {{$jadwal->waktuAkhir}}
+                            <br>
                         @endforeach
                     </td>
                     <td class="besar-2" style="border-top-right-radius:10px; border-bottom-right-radius:10px;">

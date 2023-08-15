@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alia Hospital</title>
     <link rel="stylesheet" href="css/dokter.css">
+    
 </head>
 <body>
         <div class=".container">
