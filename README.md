@@ -40,7 +40,7 @@ Buka aplikasi di browser Anda dan mulailah menggunakan fitur-fiturnya.
 
 # Kontributor
 
-- Robby Sobari
-- Join Valentino T
+- [Robby Sobari](https://github.com/robbysobarii)
+- [Join Valentino T](https://github.com/Join19001)
 - Claura 
 
