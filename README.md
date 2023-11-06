@@ -31,7 +31,7 @@ composer install
 php artisan migrate
 ```
 7. Jalankan server pengembangan
-   ```
+```
 php artisan serve
 ```
 Aplikasi akan berjalan di http://localhost:8000.
