@@ -38,7 +38,7 @@ Aplikasi akan berjalan di http://localhost:8000.
 
 Buka aplikasi di browser Anda dan mulailah menggunakan fitur-fiturnya.
 
-# Kontributor
+# Developer
 
 - [Robby Sobari](https://github.com/robbysobarii)
 - [Join Valentino T](https://github.com/Join19001)
