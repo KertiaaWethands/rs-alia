@@ -38,4 +38,9 @@ Aplikasi akan berjalan di http://localhost:8000.
 
 Buka aplikasi di browser Anda dan mulailah menggunakan fitur-fiturnya.
 
+# Kontributor
+
+- Robby Sobari
+- Join Valentino T
+- Claura 
 
